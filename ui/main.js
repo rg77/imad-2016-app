@@ -1,3 +1,4 @@
+console.log("js");
 var button = document.getElementById("counter");
 var counter=0;
 alert("button not clicked clicked");
