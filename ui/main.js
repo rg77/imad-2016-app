@@ -3,6 +3,6 @@ var counter=0;
 button.onCLick = function() {
     
     var span=document.getElementById("count");
-    count+=1;
+    counter+=1;
     span.innerHtml =counter.toString();
 }
