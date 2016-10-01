@@ -34,7 +34,7 @@ var submit_btn = doucument.getElementById("submit_btn");
 
 submit_btn.onclick = function() {
     
-  var names=["name1","name3","name3"];  
+  var names=["name1","name3","name3","name4"];  
     var list='';
     for(var i=0;i<names.length;i++)
     {
