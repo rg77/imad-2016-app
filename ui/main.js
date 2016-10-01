@@ -32,8 +32,7 @@ var submit_btn = document.getElementById("submit_btn");
 
 submit_btn.onclick = function() {
     
-    var nameInput  = document.getElementById("name");
-    var name = nameInput.value; 
+  
     
     
     //create request object
@@ -61,6 +60,8 @@ submit_btn.onclick = function() {
     };
 
     //make a request
+     var nameInput  = document.getElementById("name");
+    var name = nameInput.value; 
     request.open('GET', 'http://rg77.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
  
