@@ -42,7 +42,7 @@ submit_btn.onclick = function() {
         list+='<li>' + names[i] + '</li>';
     }
     
-    var ul = doucument.getElementById("namelist");
+    var ul = document.getElementById("namelist");
     ul.innerHTML =list;
 
     
