@@ -5,9 +5,6 @@ body {
 
 .center {
     text-align: center;
-    width:70%;
-    padding-left:30px;
-    margin-left: 12%;
 }
 
 .text-big {
@@ -30,3 +27,7 @@ body {
     padding-right: 30;
 }
     
+hr {
+    
+    width:70%;
+}
