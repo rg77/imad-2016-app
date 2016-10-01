@@ -27,3 +27,25 @@ button.onclick = function() {
     
     
 };
+var nameInput  = doucument.getElementById("name");
+var name = nameInput.value; 
+
+var submit_btn = doucument.getElementById("submit_btn");
+
+submit_btn.onclick = function() {
+    
+  var names=["name1","name3","name3"];  
+    var list='';
+    for(var i=0;i<names.length;i++)
+    {
+        
+        list+='<li>' + names[i] + '</li>';
+    }
+    
+    var ul = doucument.getElementById("namelist");
+    ul.innerHTML =list;
+
+    
+};
+
+
