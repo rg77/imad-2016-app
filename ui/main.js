@@ -66,34 +66,6 @@ submit_btn.onclick = function() {
     request.send(null);
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  var names=["name1","name3","name3","name4"];  
-    var list='';
-    for(var i=0;i<names.length;i++)
-    {
-        
-        list+='<li>' + names[i] + '</li>';
-    }
-    
-    var ul = document.getElementById("namelist");
-    ul.innerHTML =list;
-
-    
 };
 
 
