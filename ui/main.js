@@ -27,12 +27,13 @@ button.onclick = function() {
     
     
 };
-var nameInput  = document.getElementById("name");
-var name = nameInput.value; 
 
 var submit_btn = document.getElementById("submit_btn");
 
 submit_btn.onclick = function() {
+    
+    var nameInput  = document.getElementById("name");
+    var name = nameInput.value; 
     
     
     //create request object
