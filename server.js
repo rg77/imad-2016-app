@@ -18,6 +18,21 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
+
+var pool = new Pool(config)
+app.get('/test-db', function (req, res) {
+  pool.query('SELECT * from ', function(err, result) {
+      // handle an error from the query
+      if(err) {
+          res.status(500).res.send(counter.toString());
+      }
+      else {
+          res.send(JSON.tostringify(result));
+      }
+}); 
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 }); 
