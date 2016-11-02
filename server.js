@@ -27,7 +27,7 @@ app.get('/test-db', function (req, res) {
   pool.query('SELECT * FROM test', function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status(500).res.send(counter.toString());
+          res.status(500).send(counter.toString());
       }
       else {
           res.send(JSON.stringify(result.rows));
@@ -158,11 +158,11 @@ app.get('/articles/:articleName',function (req,res) {
       pool.query("SELECT * FROM article WHERE title = ' " +  articleName + "'", function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status(500).res.send(counter.toString());
+          res.status(500).send(counter.toString());
       }
       else {
           if(result.rows.length === 0){
-            res.status(404).res.send('Article Not Found');
+            res.status(404).send('Article Not Found');
               
           }
           else {
