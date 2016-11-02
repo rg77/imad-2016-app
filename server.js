@@ -30,9 +30,9 @@ app.get('/test-db', function (req, res) {
           res.status(500).res.send(counter.toString());
       }
       else {
-          res.send(JSON.tostringify(result));
+          res.send(JSON.stringify(result));
       }
-});
+   });
 }); 
 
 
