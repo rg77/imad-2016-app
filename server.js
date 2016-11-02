@@ -152,10 +152,10 @@ return htmlTemplate;
 
 
 app.get('/articles/:articleName',function (req,res) {
-      var articleName = req.params.articleName;
+      
       
        
-      pool.query("SELECT * FROM article WHERE title = '" +  articleName + "'", function(err, result) {
+      pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName] ,function(err, result) {
       // handle an error from the query
       if(err) {
           res.status(500).send(counter.toString());
