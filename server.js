@@ -16,7 +16,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var pool = new Pool(config)
+var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
   pool.query('SELECT * from test', function(err, result) {
       // handle an error from the query
@@ -26,6 +26,7 @@ app.get('/test-db', function (req, res) {
       else {
           res.send(JSON.tostringify(result));
       }
+});
 }); 
 
 
