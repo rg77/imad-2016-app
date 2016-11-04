@@ -196,10 +196,12 @@ return htmlTemplate;
 
 function createPageTemplate(data,category) {
    
+   
+   
    for(i =1;i<=data.length;i++) {
     
     
-    articleTitles = ''
+    articleTitles = "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
    
        
    }
@@ -356,10 +358,7 @@ function createPageTemplate(data,category) {
             <div class="panel-heading" style="background: #4FFF8D;" id="articles_panel_heading"> <h4  style="font-size: 40px;"> ARTICLES </h4> </div>
             <div class="panel-body">
                 <div class="list-group">
-                    <a  class="list-group-item active">First item</a>
-                    <a  class="list-group-item">Second item</a>
-                    <a  class="list-group-item">Third item</a>
-                    
+                    ${articleTitles}
                 </div>
            </div>
            </div>
