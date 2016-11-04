@@ -6,7 +6,7 @@ for(i=0;i<link.length;i++)
     
 link[i].onclick = function() {
     
-    linkName = link[i].innerHTML ; 
+    articleName = link[i].innerHTML ; 
     
     //create request object
     var request =  new XMLHttpRequest();
@@ -15,13 +15,13 @@ link[i].onclick = function() {
         if (request.readyState === XMLHttpRequest.DONE) {
         // everything is good, the response is received
             if(request.status === 200) {
-                var counter = request.responseText;
-                var span=document.getElementById("count");
-                span.innerHTML =counter.toString();
-            
+                var data = JSON.parse(request.responseText);
                 
+                var span1=document.getElementById("articleTitle");
+                span1.innerHTML =data.title.toString();
                 
-                
+                var span2=document.getElementById("articleContent");
+                span2.innerHTML =data.content.toString();
                 
                 
             }
@@ -32,7 +32,7 @@ link[i].onclick = function() {
     };
 
     //make a request
-    request.open('GET', 'http://rg77.imad.hasura-app.io/articles/' +  linkName,true);
+    request.open('GET', 'http://rg77.imad.hasura-app.io/articles/' +  articleName,true);
     request.send(null);
     
     
