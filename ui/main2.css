@@ -42,7 +42,7 @@ header p {
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url('ink.jpg');
+  background-image: url('ui/ink.jpg');
   background-size: cover;
   color: #ffffff;
   height: 500px;
