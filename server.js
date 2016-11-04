@@ -366,7 +366,7 @@ function createPageTemplate(data,category) {
   
 </section>
 
-   <script type="text/javascript" src="/ui/personal.js"></script>
+   <script type="text/javascript" src="/ui/article.js"></script>
   
 
   
