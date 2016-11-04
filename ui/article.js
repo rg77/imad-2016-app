@@ -1,12 +1,13 @@
 var link = document.getElementsByClassName("article_title");
 
+console.log(link.length);
 for(i=0;i<link.length;i++)
 {
     
     
 link[i].onclick = function() {
     
-    alert("link clicked");
+    console.log("link clicked");
     articleName = link[i].innerHTML ; 
     
     //create request object
