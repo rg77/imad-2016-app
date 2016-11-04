@@ -53,6 +53,10 @@ app.get('/ui/bootstrap.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bootstrap.min.css'));
 });
 
+app.get('/ui/ink.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ink.jpg'));
+});
+
 
 
 /*
