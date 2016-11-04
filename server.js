@@ -49,6 +49,11 @@ app.get('/ui/main2.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main2.css'));
 });
 
+app.get('/ui/bootstrap.min.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.min.css'));
+});
+
+
 
 /*
 app.get('/ui/style.css', function (req, res) {
