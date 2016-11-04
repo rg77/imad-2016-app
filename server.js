@@ -202,10 +202,10 @@ function createPageTemplate(data,category) {
    
    articleTitles='';
    
-   for(i =1;i<=data.length;i++) {
+   for(i =0;i<data.length;i++) {
     
     
-    articleTitles += "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
+    articleTitles += "<a  class='list-group-item' class='article_title'>'" + data[i].title + "</a>"; 
    
        
    }
