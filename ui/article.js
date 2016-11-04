@@ -6,6 +6,7 @@ for(i=0;i<link.length;i++)
     
 link[i].onclick = function() {
     
+    alert("link clicked");
     articleName = link[i].innerHTML ; 
     
     //create request object
