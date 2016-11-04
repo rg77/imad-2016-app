@@ -201,7 +201,7 @@ function createPageTemplate(data,category) {
    for(i =1;i<=data.length;i++) {
     
     
-    articleTitles = "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
+    articleTitles = data.length + "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
    
        
    }
@@ -211,7 +211,7 @@ function createPageTemplate(data,category) {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PERSONAL</title>
+  <title>${category}</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="ui/bootstrap.min.css" >
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
@@ -237,7 +237,7 @@ function createPageTemplate(data,category) {
             <h1 style="
              background: #44CAE8;
              font-size: 50px;">  
-                PERSONAL 
+                ${category} 
             </h1>         
        </div>   
    </div>
