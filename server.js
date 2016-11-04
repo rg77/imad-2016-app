@@ -201,7 +201,7 @@ function createPageTemplate(data,category) {
    for(i =1;i<=data.length;i++) {
     
     
-    articleTitles = data.length + "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
+    articleTitles += "<a  class='list-group-item' id='article_title" + i + "'>" + data[i-1].title + "</a>"; 
    
        
    }
