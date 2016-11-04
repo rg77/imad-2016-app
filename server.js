@@ -419,7 +419,7 @@ return htmlTemplate;
 
 
 
-app.get(':categoryName',function (req,res) {
+app.get('/:categoryName',function (req,res) {
       
       
       var category = req.params.categoryName;
