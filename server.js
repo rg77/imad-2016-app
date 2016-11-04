@@ -263,8 +263,8 @@ function createPageTemplate(data,category) {
             
        <div class="col-sm-9" id="canvas" >
              <div class="panel panel-default">
-                <div class="panel-heading"><h4  style="font-size: 40px;"> TITLE OF ARTICLE</h4></div>
-                <div class="panel-body">
+                <div class="panel-heading"><h4  style="font-size: 40px;" id="articleTitle"> TITLE OF ARTICLE</h4></div>
+                <div class="panel-body" id="articleContent">
                        <b>Panel Content</b>
                         sdfsd dfdsfgsdfgsd
                         ffdfsgdfsg
