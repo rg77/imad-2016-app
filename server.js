@@ -16,9 +16,17 @@ var app = express();
 app.use(morgan('combined'));
 
 
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
+}); 
+
+/*
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 }); 
+*/
+
 
 
 var pool = new Pool(config);
@@ -37,6 +45,12 @@ app.get('/test-db', function (req, res) {
 
 
 
+app.get('/ui/main2.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main2.css'));
+});
+
+
+/*
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -49,6 +63,7 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+*/
 
 var counter =0;
 app.get('/counter',function(req,res) { 
