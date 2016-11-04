@@ -22,9 +22,9 @@ app.get('/', function (req, res) {
 }); 
 
 
-app.get('/personal', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
-}); 
+//app.get('/personal', function (req, res) {
+ // res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
+//}); 
 
 /*
 app.get('/', function (req, res) {
