@@ -196,7 +196,7 @@ return htmlTemplate;
 
 function createPageTemplate(data,category) {
    
-   
+   articleTitles='';
    
    for(i =1;i<=data.length;i++) {
     
