@@ -21,6 +21,20 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
 }); 
 
+app.get('/fonts/glyphicons-halflings-regular.woff2', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/fonts', 'glyphicons-halflings-regular.woff2'));
+}); 
+
+app.get('/fonts/glyphicons-halflings-regular.woff', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/fonts', 'glyphicons-halflings-regular.woff'));
+}); 
+
+app.get('/fonts/glyphicons-halflings-regular.tff', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/fonts', 'glyphicons-halflings-regular.tff'));
+}); 
+
+
+
 /*
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
