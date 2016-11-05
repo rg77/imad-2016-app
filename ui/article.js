@@ -60,12 +60,8 @@ link[i].onclick = function() {
     
 */
 
+function fetchArticle(t){
 
-var elements = document.getElementsByTagName("a"); 
-for(var i=0; i<elements.length; i++){
-    if (elements[i].className === 'article_title') { 
-         elements[i].onclick = function() { 
-           console.log("yes link clicked"); 
-          };
- } 
+    console.log(t.innerHTML + "link clicked")
+    
 }
