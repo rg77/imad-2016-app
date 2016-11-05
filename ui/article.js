@@ -1,4 +1,4 @@
-var i;
+/*var i;
 var link = document.getElementsByClassName("article_title");
 
 console.log("link length:" + link.length);
@@ -58,3 +58,14 @@ link[i].onclick = function() {
     };
 }
     
+*/
+
+
+var elements = document.getElementsByTagName("a"); 
+for(var i=0; i<elements.length; i++){
+    if (elements[i].className === 'article_title') { 
+         elements[i].onclick = function() { 
+           alert("yes link clicked"); 
+          };
+ } 
+}
