@@ -65,7 +65,7 @@ var elements = document.getElementsByTagName("a");
 for(var i=0; i<elements.length; i++){
     if (elements[i].className === 'article_title') { 
          elements[i].onclick = function() { 
-           alert("yes link clicked"); 
+           console.log("yes link clicked"); 
           };
  } 
 }
