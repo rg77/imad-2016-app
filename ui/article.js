@@ -1,31 +1,10 @@
-/*var i;
-var link = document.getElementsByClassName("article_title");
-
-console.log("link length:" + link.length);
-
-for(i=0;i<link.length;i++)
-{
-    console.log(link[i].innerHTML);
-    
-    
-}
-
-for(i=0;i<link.length;i++)
-{
-    
-    console.log("in loop: " + link[i].innerHTML);
-    if(link[i].onclick === true)
-        {
-            console.log("link clicked");
-        }
-
-link[i].onclick = function() {
+function fetchArticle(link) {
     
     console.log("link clicked");
-    console.log("value of i: " + i);
-    console.log(link[i].innerHTML);
     
-    articleName = link[i].innerHTML ; 
+    console.log(link.innerHTML);
+    
+    articleName = link.innerHTML ; 
     
     //create request object
     var request =  new XMLHttpRequest();
@@ -58,10 +37,3 @@ link[i].onclick = function() {
     };
 }
     
-*/
-
-function fetchArticle(t){
-
-    console.log(t.innerHTML + "link clicked")
-    
-}
