@@ -13,7 +13,7 @@ for(i=0;i<link.length;i++)
 for(i=0;i<link.length;i++)
 {
     
-    
+    console.log("in loop: " + link[i].innerHTML);
 link[i].onclick = function() {
     
     console.log("link clicked");
