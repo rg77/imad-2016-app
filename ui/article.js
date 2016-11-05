@@ -13,7 +13,9 @@ function fetchArticle(link) {
         if (request.readyState === XMLHttpRequest.DONE) {
         // everything is good, the response is received
             if(request.status === 200) {
-                var data = JSON.parse(request.responseText);
+                
+                var data = request.responseText; 
+                data = JSON.parse(data);
                 
                 var span1=document.getElementById("articleTitle");
                 span1.innerHTML =data.title.toString();
