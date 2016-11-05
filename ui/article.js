@@ -34,6 +34,7 @@ function fetchArticle(link) {
     request.send(null);
     
     
-    };
-}
+    }
+    
+
     
