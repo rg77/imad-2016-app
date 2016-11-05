@@ -8,6 +8,8 @@ for(i=0;i<link.length;i++)
 link[i].onclick = function() {
     
     console.log("link clicked");
+    console.log(link[i].innerHTML);
+    
     articleName = link[i].innerHTML ; 
     
     //create request object
