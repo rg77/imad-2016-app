@@ -17,6 +17,7 @@ for(i=0;i<link.length;i++)
 link[i].onclick = function() {
     
     console.log("link clicked");
+    console.log("value of i: " + i);
     console.log(link[i].innerHTML);
     
     articleName = link[i].innerHTML ; 
