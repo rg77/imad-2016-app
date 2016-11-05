@@ -1,6 +1,15 @@
+var i;
 var link = document.getElementsByClassName("article_title");
 
 console.log("link length:" + link.length);
+
+for(i=0;i<link.length;i++)
+{
+    console.log(link[i].innerHTML);
+    
+    
+}
+
 for(i=0;i<link.length;i++)
 {
     
