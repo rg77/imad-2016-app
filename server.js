@@ -236,7 +236,7 @@ function createPageTemplate(data,category) {
    for(i =0;i<data.length;i++) {
     
     
-    articleTitles += "<a  href='#' class='article_title, list-group-item' >" + data[i].title + "</a> "; 
+    articleTitles += "<a  href='#' class='article_title list-group-item' >" + data[i].title + "</a> "; 
    
        
    }
