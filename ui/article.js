@@ -14,6 +14,11 @@ for(i=0;i<link.length;i++)
 {
     
     console.log("in loop: " + link[i].innerHTML);
+    if(link[i].onclick === true)
+        {
+            console.log("link clicked");
+        }
+
 link[i].onclick = function() {
     
     console.log("link clicked");
