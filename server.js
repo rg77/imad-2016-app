@@ -63,7 +63,7 @@ app.get('articles/:articleId',function (req,res) {
       }
       else {
           if(result.rows.length === 0){
-            res.status(404).send('Article Not Found' + req.params.articleId );
+            res.status(404).send('Article Not Foundclfblcf' + req.params.articleId );
               
           }
           else {
