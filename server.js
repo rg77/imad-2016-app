@@ -470,7 +470,7 @@ app.get('/:categoryName',function (req,res) {
       }
       else {
           if(result.rows.length === 0){
-            res.status(404).send('Article Not Found');
+            res.status(404).send('poklArticle Not Found');
               
           }
           else {
