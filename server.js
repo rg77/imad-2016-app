@@ -68,8 +68,8 @@ app.get('/articles/:articleId',function (req,res) {
           }
           else {
             
-            //var articleData = result.rows[0];        
-           res.send(JSON.stringify(result.rows[0]));
+            var articleData = result.rows[0];        
+           res.send(JSON.stringify(articleData));
               
           }
           
