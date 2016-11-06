@@ -32,9 +32,9 @@ function fetchArticle(link) {
     
     
     };
-
+id = link.id;
     //make a request
-    request.open('GET', 'http://rg77.imad.hasura-app.io/articles/' +  articleName,true);
+    request.open('GET', 'http://rg77.imad.hasura-app.io/articles/' +  id,true);
     request.send(null);
     
     
