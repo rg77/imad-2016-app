@@ -51,7 +51,7 @@ app.get('/test-db', function (req, res) {
  
 
 
-app.get('articles/:articleId',function (req,res) {
+app.get('/articles/:articleId',function (req,res) {
       
       
       var articleId = parseInt(req.params.articleId);
@@ -63,7 +63,7 @@ app.get('articles/:articleId',function (req,res) {
       }
       else {
           if(result.rows.length === 0){
-            res.status(303).send('Article Not Foundclfblcf' + req.params.articleId );
+            res.status(404).send('Article Not Found');
               
           }
           else {
@@ -470,7 +470,7 @@ app.get('/:categoryName',function (req,res) {
       }
       else {
           if(result.rows.length === 0){
-            res.status(404).send('poklArticle Not Found');
+            res.status(404).send('Article Not Found');
               
           }
           else {
@@ -503,7 +503,7 @@ app.get('/articles/:articleName',function (req,res) {
       }
       else {
           if(result.rows.length === 0){
-            res.status(404).send('7676Article Not Found');
+            res.status(404).send('Article Not Found');
               
           }
           else {
