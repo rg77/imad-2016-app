@@ -1,4 +1,4 @@
-console.log("6-16;10:00 am");
+console.log("6-16;10:14 am");
 function fetchArticle(link) {
     
     console.log("link clicked");
