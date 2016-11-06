@@ -48,7 +48,7 @@ app.post('/create-user', function (req, res) {
     
     
     username = req.body.username;
-    password = req .body.password;
+    password = req.body.password;
     
     salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password,salt);
