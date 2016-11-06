@@ -10,13 +10,24 @@ function fetchArticle(link) {
     //create request object
     var request =  new XMLHttpRequest();
     
+    
+    
+    request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE) {
+        // everything is good, the response is received
+            if(request.status === 200) {
+            var names= request.responseText;
+            names = JSON.parse(names);
+            var list='';       
+    
+    
     request.onreadystatechange = function() {
         if (request.readyState === XMLHttpRequest.DONE) {
         // everything is good, the response is received
             if(request.status === 200) {
                 
                 var data = request.responseText; 
-                data = JSON.parse(data);
+                data = JSON.parse(data[0]);
                 
                 var span1=document.getElementById("articleTitle");
                 span1.innerHTML =data.title.toString();
