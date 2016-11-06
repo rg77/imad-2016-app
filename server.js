@@ -23,6 +23,25 @@ app.get('/', function (req, res) {
 }); 
 
 
+
+
+function hash(input,salt) {
+
+var hashed = crypto.pbkdf2(input, salt, 100000, 512, 'sha512');
+return hashed.toString('hex');
+    
+}
+ 
+
+app.get('/hash/:input', function (req, res) {
+var hashedString = hash(req.params.input,'this-is-some-random-string');
+res.send(hashedString); 
+    
+}); 
+ 
+
+
+
 //app.get('/personal', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
 //}); 
@@ -49,20 +68,6 @@ app.get('/test-db', function (req, res) {
    });
 }); 
 
- 
-
-function hash(input,salt) {
-
-var hashed = crypto.pbkdf2(input, salt, 100000, 512, 'sha512');
-return hashed.toString('hex');
-    
-}
- 
-app.get('/hash/:input', function (req, res) {
-var hashedString = hash(req.params.input,'this-is-some-random-string');
-res.send(hashedString);
-    
-}); 
  
 
 
