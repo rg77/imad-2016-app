@@ -42,7 +42,7 @@ res.send(hashedString);
 }); 
  
 
-app.get('/create-user', function (req, res) {
+app.post('/create-user', function (req, res) {
     //user-name,password
     //post request: '{"username:" "ron","password:" "password"}'
     //JSON
