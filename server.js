@@ -51,11 +51,11 @@ app.get('/test-db', function (req, res) {
  
 
 
-app.get('articles/:articleName',function (req,res) {
+app.get('articles/:articleId',function (req,res) {
       
       
       var article = req.params.articleName;
-      pool.query("SELECT * FROM article WHERE title = $1", [articleName] ,function(err, result) {
+      pool.query("SELECT * FROM article WHERE id = $1", [articleId] ,function(err, result) {
       // handle an error from the query
       if(err) {
           res.status(500).send(counter.toString());
@@ -68,7 +68,7 @@ app.get('articles/:articleName',function (req,res) {
           else {
             
             //var articleData = result.rows[0];        
-           res.send(JSON.stringify(result.rows[0]));
+           res.send(JSON.stringify(result.rows));
               
           }
           
@@ -240,7 +240,7 @@ function createPageTemplate(data,category) {
    for(i =0;i<data.length;i++) {
     
     
-    articleTitles += "<a  href='#' class='list-group-item' onclick='fetchArticle(this)' >" + data[i].title + "</a> "; 
+    articleTitles += "<a  href='#' class='list-group-item' id='" + data[i].id + "' onclick='fetchArticle(this)' >" + data[i].title + "</a> "; 
    
        
    }
