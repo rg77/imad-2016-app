@@ -42,8 +42,17 @@ res.send(hashedString);
 
 app.get('/create-user', function (req, res) {
     //user-name,password
-    salt = 
+    salt = crypto.getRandomByte(128).toString('hex');
     var dbString = hash(password,salt);
+    pool.query("INSERT INTO 'user' (username,password) values ($1,$2)",[username,dbString],function(err, result) {
+      // handle an error from the query
+      if(err) {
+          res.status(500).send(err.toString());
+      }
+      else {
+          res.send("user successfully created:" + username);
+      }
+   });
 }); 
  
 
@@ -66,7 +75,7 @@ app.get('/test-db', function (req, res) {
   pool.query('SELECT * FROM test', function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status(500).send(counter.toString());
+          res.status(500).send(err.toString());
       }
       else {
           res.send(JSON.stringify(result.rows));
@@ -85,7 +94,7 @@ app.get('/articles/:articleId',function (req,res) {
       pool.query("SELECT * FROM article WHERE id = $1", [articleId] ,function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status(500).send("error");
+          res.status(500).send(err.toString());
       }
       else {
           if(result.rows.length === 0){
