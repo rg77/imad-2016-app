@@ -54,7 +54,7 @@ app.get('/test-db', function (req, res) {
 app.get('articles/:articleId',function (req,res) {
       
       
-      var articleId = req.params.articleId;
+      var articleId = parsetInt(req.params.articleId);
       
       pool.query("SELECT * FROM article WHERE id = $1", [articleId] ,function(err, result) {
       // handle an error from the query
