@@ -40,6 +40,12 @@ res.send(hashedString);
 }); 
  
 
+app.get('/create-user', function (req, res) {
+    //user-name,password
+    salt = 
+    var dbString = hash(password,salt);
+}); 
+ 
 
 
 //app.get('/personal', function (req, res) {
