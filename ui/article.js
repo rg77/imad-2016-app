@@ -16,8 +16,8 @@ function fetchArticle(link) {
         // everything is good, the response is received
             if(request.status === 200) {
                 
-                var data = request.responseText; 
-                data = JSON.parse(data[0]);
+                var data = request.responseText;
+                data = JSON.parse(data);
                 
                 var span1=document.getElementById("articleTitle");
                 span1.innerHTML =data.title.toString();
