@@ -54,12 +54,12 @@ app.get('/test-db', function (req, res) {
 app.get('articles/:articleId',function (req,res) {
       
       
-      var articleId = parsetInt(req.params.articleId);
+      var articleId = parseInt(req.params.articleId);
       
       pool.query("SELECT * FROM article WHERE id = $1", [articleId] ,function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status(500).send(counter.toString());
+          res.status(500).send("error");
       }
       else {
           if(result.rows.length === 0){
