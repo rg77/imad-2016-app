@@ -76,7 +76,7 @@ app.post('/create-user', function (req, res) {
  
 
 
-
+/*
 app.post('/login', function (req, res) {
     //user-name,password
     //post request: '{"username:" "ron","password:" "password"}'
@@ -112,6 +112,8 @@ app.post('/login', function (req, res) {
 
 
 } );
+*/
+
 
 
 //app.get('/personal', function (req, res) {
