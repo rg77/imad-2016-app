@@ -104,7 +104,7 @@ app.post('/login', function (req, res) {
           var  salt = dbString.split('$')[2];
           var hashedPassword = hash(password,salt);
           //check if the password stored in the database matches eith the hashed password
-          if(hashedPassword === password){
+          if(hashedPassword === dbString){
               res.send('credentials are correct');
               
           }
