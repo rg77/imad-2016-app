@@ -76,7 +76,7 @@ app.post('/create-user', function (req, res) {
  
 
 
-/*
+
 app.post('/login', function (req, res) {
     //user-name,password
     //post request: '{"username:" "ron","password:" "password"}'
@@ -96,14 +96,22 @@ app.post('/login', function (req, res) {
       else {
           
           if(result.rows.length === 0){
-              res.send(403).('username/password is invalid');
+              res.send(403).send('username/password is invalid');
           }
           else{
           //match the password
           var dbString = result.rows[0].password;
-          dbString.split('$')[]
-          res.send("user successfully created:" + username);
-      
+          var  salt = dbString.split('$')[2];
+          var hashedPassword = hash(password,salt);
+          //check if the password stored in the database matches eith the hashed password
+          if(hashedPassword === password){
+              res.send('credentials are correct');
+              
+          }
+          else{
+                res.send(403).send('username/password is invalid');
+              
+          }
               
           }
           
@@ -112,7 +120,7 @@ app.post('/login', function (req, res) {
 
 
 } );
-*/
+
 
 
 
