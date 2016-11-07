@@ -4,10 +4,11 @@
   <title>INK IT</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="ui/bootstrap.min.css" >
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/ui/main2.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
+
 
 <body>
   <header class="container">
@@ -17,14 +18,14 @@
     margin-left: 0px;
     margin-right: 0px;"> 
       <div class="col-sm-4" style="background: rgba(33, 255, 112, 0.79);">
-            <h1  style="font-size: 120px;">INK IT</h1>
+            <h2  id="logo_font" >INK IT</h2>
        </div>
    
        <div class="col-sm-7">
            <form class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="email address">
-                    <input type="text" class="form-control" placeholder="password">
+                    <input type="text" class="form-control" placeholder="username">
+                    <input type="password" class="form-control" placeholder="password">
                     <button type="button" class="btn btn-default navbar-btn">Sign in</button>
                 </div>
             </form>
@@ -43,17 +44,36 @@
    </div>
 
 </header>
-
-<section class="jumbotron">
-  <div class ="container">
-  	<div class="row text-center">
-    	<h2 style="color: #05090E;background: rgba(228, 255, 212, 0.49);">
-    	    Canvas For Your Thoughts
-    	</h2>
-    
+<div class=row>
+    <div class="col-sm-8">
+        <section class="jumbotron"> 
+  
+            <div class ="container">
+  	            <div class="row text-center" >
+    	                <h2 id="tagline">
+    	                     Canvas For Your Thoughts
+    	                </h2>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
-</section>
+     <div class="col-sm-3 signup_font ">
+            <h3  >Don't have an account? It's easy to make one!</h3>
+            <h2  >Sign-up</h2>
+            <form>
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="user-name">
+                </div>
+                <div class="form-group">       
+                        <input type="password" class="form-control" placeholder="password">
+                </div>
+                <button type="button" class="btn btn-default navbar-btn" id="signup_btn">Create Account</button>
+              
+            </form>
+     </div>
+
+
+</div>  
   
   </body>
 </html>
