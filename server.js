@@ -22,8 +22,8 @@ app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
 //  res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
-res.send("hello");
-    console.log("hello");
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+
 }); 
 
 
