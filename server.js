@@ -26,6 +26,7 @@ app.get('/', function (req, res) {
 
 }); 
 
+/*for prev starts here*/
 app.get('/ui/main.js', function (req, res) {
 //  res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
@@ -37,6 +38,31 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 
 }); 
+
+var counter =0;
+app.get('/counter',function(req,res) { 
+counter += 1;
+res.send(counter.toString());
+});
+
+
+
+var names = [];
+//app.get('/submit-name/:name', function(req,res) {
+app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxxx
+
+//get name from request
+//var name = req.params.name;
+var name = req.query.name;
+
+
+names.push(name);    
+//JSON: javascript object notation
+res.send(JSON.stringify(names));
+    
+} );
+
+/*for prev ends here*/
 
 
 
