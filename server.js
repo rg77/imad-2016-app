@@ -179,6 +179,13 @@ app.get('/check-login', function (req, res) {
     }
 });
 
+
+app.get('/logout', function (req, res) {
+delete req.session.auth;
+res.send('u  r logged out');
+});
+
+
 //app.get('/personal', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
 //}); 
