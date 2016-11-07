@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 const crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session'); 
 
 var config = {
   host: 'db.imad.hasura-app.io',
@@ -18,6 +19,13 @@ var app = express();
 app.use(morgan('combined'));
 
 app.use(bodyParser.json());
+
+app.use(session({
+  secret: 'keyboard cat',
+  
+  cookie: { maxAge: 1000*60*60*24*30 }
+}));
+
 
 
 app.get('/', function (req, res) {
@@ -140,6 +148,11 @@ app.post('/login', function (req, res) {
           var hashedPassword = hash(password,salt);
           //check if the password stored in the database matches eith the hashed password
           if(hashedPassword === dbString){
+             //set the session id
+             req.session.auth = {userId: result.rows[0].id};
+             //set cookie with session id
+             //internally on the server side, it maps the session id to an object
+             //{{auth:userId}}
               res.send('credentials are correct');
               
           }
@@ -157,7 +170,14 @@ app.post('/login', function (req, res) {
 } );
 
 
-
+app.get('/check-login', function (req, res) {
+ if(req.session && req.session.auth && req.session.auth.userId ){
+     res.send('u are logged in' +  req.session.auth.userId.toString());
+ }
+    else{
+        res.send('u are not logged in');
+    }
+});
 
 //app.get('/personal', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'personal.html'));
