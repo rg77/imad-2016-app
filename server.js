@@ -415,10 +415,10 @@ function createPageTemplate(data,category) {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>${category}</title>
+  <title id="title">${category.toUpperCase()}</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="ui/bootstrap.min.css" >
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/ui/main2.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
@@ -437,25 +437,33 @@ function createPageTemplate(data,category) {
    <!--<div class="col-sm-1">
             <p  style="font-size: 100px;color: #2B4750;">|<p>
        </div>   -->
-       <div class="col-sm-7">
-            <h1 style="
-             background: #44CAE8;
-             font-size: 50px;">  
-                ${category} 
-            </h1>         
-       </div>   
+       <section id="dashboard">
+            <div class="col-sm-7">
+               <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="username">
+                        <input type="password" class="form-control" placeholder="password">
+                        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+                    </div>
+                </form>
+           </div>   
+        </section>
+   
    </div>
    <br>
    <div class="navbar">
      <div class="row text-center">
        <nav nav  class="col-sm-12">
-        	<p id="home"> <a href="final_index.html"> HOME <span class="glyphicon glyphicon-home"></span> </a></p> 
-        	<p> <a href="/web.html"> WEB </a>  </p>
-        	<p><a href="/technology.html"> TECHNOLOGY </a></p>
-        	<p> <b> <u><a href="/personal.html"> PERSONAL </a>  </u></b></p>
+        	<div class="row text-center">
+        	    <p id="home"> <a href="/" class="list-inline-item" id="nav_menu"> HOME <span class="glyphicon glyphicon-home"></span> </a></p> 
+        	    <p> <a href="/web"  <span id="nav_menu_WEB">class="list-inline-item"</span> > WEB </a>  </p>
+        	    <p><a href="/technology"  <span id="nav_menu_TECHNOLOGY">class="list-inline-item"</span>> TECHNOLOGY </a></p>
+        	    <p> <b> <a href="/personal"  <span id="nav_menu_PERSONAL">class="list-group-item active"</span> > PERSONAL </a> </b></p>
+            </div>
         </nav>
      </div>    
    </div>
+</div>
 
 </header>
 
