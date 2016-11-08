@@ -426,31 +426,28 @@ function createPageTemplate(data,category) {
 <body>
   <header class="container">
   	
+  	<header class="container">
+  	
   	
   	<div class="row text-center" style="
     margin-left: 0px;
     margin-right: 0px;"> 
       <div class="col-sm-4" style="background: rgba(33, 255, 112, 0.79);">
-            <h1  style="font-size: 120px;">INK IT</h1>
+            <h2  id="logo_font" >INK IT</h2>
        </div>
    
-   <!--<div class="col-sm-1">
-            <p  style="font-size: 100px;color: #2B4750;">|<p>
-       </div>   -->
-       <section id="dashboard">
-            <div class="col-sm-7">
-               <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="username">
-                        <input type="password" class="form-control" placeholder="password">
-                        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
-                    </div>
-                </form>
-           </div>   
-        </section>
-   
+       <div class="col-sm-7">
+           <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="username">
+                    <input type="password" class="form-control" placeholder="password">
+                    <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+                </div>
+            </form>
+       </div>   
    </div>
    <br>
+  
    <div class="navbar">
      <div class="row text-center">
        <nav nav  class="col-sm-12">
