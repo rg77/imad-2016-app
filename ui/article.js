@@ -41,5 +41,11 @@ function fetchArticle(link) {
     
     }
     
-
+    
+    
+    var title = document.getElementById("title");
+    var category = title.innerHTML;
+    var span = document.getElementById('nav_menu_' + category);
+    span.innerHTML = "class='list-group-item active'";
+    
     
