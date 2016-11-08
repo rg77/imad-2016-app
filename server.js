@@ -456,10 +456,10 @@ function createPageTemplate(data,category) {
        <nav nav  class="col-sm-12">
         	<div class="row text-center">
         	    <p id="home"> <a href="/" class="list-inline-item" id="nav_menu"> HOME <span class="glyphicon glyphicon-home"></span> </a></p> 
-        	    <p> <a href="/web"  <span id="nav_menu_WEB">class="list-inline-item"</span> > WEB </a>  </p>
-        	    <p><a href="/technology"  <span id="nav_menu_TECHNOLOGY">class="list-inline-item"</span>> TECHNOLOGY </a></p>
-        	    <p> <b> <a href="/personal"  <span id="nav_menu_PERSONAL">class="list-group-item active"</span> > PERSONAL </a> </b></p>
-            </div>
+        	     <p> <a href="/web"  id="nav_menu_WEB" class="list-inline-item" > WEB </a>  </p>
+        	    <p><a href="/technology" id="nav_menu_TECHNOLOGY" class="list-inline-item"> TECHNOLOGY </a></p>
+        	    <p> <b> <a href="/personal"  id="nav_menu_PERSONAL" class="list-inline-item" > PERSONAL </a> </b></p>
+        </div>
         </nav>
      </div>    
    </div>
