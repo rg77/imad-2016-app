@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>INK IT</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/ui/bootstrap.min.css" >
+  <link href='https://fonts.googleapis.com/css?family=Itim|Yellowtail|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/ui/main2.css">
+  
+</head>
+
+
+<body>
+  <header class="container">
+  	
+  	
+  	<div class="row text-center" style="
+    margin-left: 0px;
+    margin-right: 0px;"> 
+      <div class="col-sm-4" style="background: rgba(33, 255, 112, 0.79);">
+            <h2  id="logo_font" >INK IT</h2>
+       </div>
+
+       
+       <div class="col-sm-8" id="dashboard">
+         
+               <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="sign-in_username" placeholder="username">
+                        <input type="password" class="form-control" id="sign-in_password" placeholder="password">
+                        <button type="button" class="btn btn-default navbar-btn" id="signin_btn" onclick="signin()">Sign in</button>
+                    </div>
+                </form>
+                 
+       </div>   
+ 
+   </div>
+   <br>
+   <div class="navbar">
+     <div class="row text-center">
+       <nav nav  class="col-sm-12">
+        	<div class="row text-center">
+        	    <p id="home"> <a href="/" class="list-group-item active" id="nav_menu"> HOME <span class="glyphicon glyphicon-home"></span> </a></p> 
+        	    <p> <a href="/categories/web" class="list-inline-item" id="nav_menu"> WEB </a>  </p>
+        	    <p><a href="/categories/technology" class="list-inline-item" id="nav_menu"> TECHNOLOGY </a></p>
+        	    <p> <b> <a href="/categories/personal" class="list-inline-item" id="nav_menu"> PERSONAL </a> </b></p>
+            </div>
+        </nav>
+     </div>    
+   </div>
+
+
+</header>
+<div class=row>
+    <div class="col-sm-8">
+        <section class="jumbotron"> 
+  
+            <div class ="container">
+  	            <div class="row text-center" >
+    	                <h2 id="tagline">
+    	                     Canvas For Your Thoughts
+    	                </h2>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <section id="signup_area"> 
+        <div class="col-sm-3 signup_font ">
+           <section>
+            <h3  >Don't have an account? It's easy to make one!</h3>
+            <h2  >Sign-up</h2>
+            <form>
+                <div class="form-group">
+                        <input type="text" class="form-control" id="sign-up_username" placeholder="user-name">
+                </div>
+                <div class="form-group">       
+                        <input type="password" class="form-control" id="sign-up_password" placeholder="password">
+                </div>
+                <button type="button" class="btn btn-default navbar-btn" id="signup_btn" onclick="signup()" >Create Account</button>
+              
+            </form>
+        </div>
+    </section>
+
+</div>  
+    <script type="text/javascript" src="/ui/main2.js"></script>
+  
+  </body>
+  
+ <footer class="navbar-default" id="footer_nav">
+ <div class="container">
+        <h2 id="footer_font">Developed by: <a href=/profile  id="profile">Rohan<a></h2>
+ </div><!-- end container -->
+</footer>
+</html>
