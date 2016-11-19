@@ -123,6 +123,14 @@ var htmlTemplate =`
     <script type="text/javascript" src="/ui/main2.js"></script>
   
   </body>
+  
+ <footer class="navbar-default" id="footer_nav">
+ <div class="container">
+        <h2 id="footer_font">Developed by: <a href=/profile  id="profile">Rohan<a></h2>
+ </div><!-- end container -->
+</footer>
+
+  
 </html>
 
 `;
