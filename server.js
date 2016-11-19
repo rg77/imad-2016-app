@@ -269,8 +269,6 @@ app.post('/sign-up', function (req, res) {
               res.status(500).send(err.toString());
           }
           else {
-                  res.send("user successfully created:" + username);
-       
                   //checking for user id to create session
                   pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err, result) {
                       // handle an error from the query
@@ -281,6 +279,8 @@ app.post('/sign-up', function (req, res) {
                       
                             //set the session id
                              req.session.auth = {userId: result.rows[0].id};
+                             res.send("user successfully created:" + username);
+       
                              //set cookie with session id
                              //internally on the server side, it maps the session id to an object
                              //{{auth:userId}}
