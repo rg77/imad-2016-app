@@ -54,7 +54,7 @@ var prev_signup = `
                                        
                             
                         }
-                        else if(request.status === 403) {
+                        else if(request.status === 401) {
                             alert("Oops! This username already exists! Try some another username!");
                         }
                         else if(request.status === 500) {
