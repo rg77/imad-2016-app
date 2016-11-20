@@ -271,35 +271,68 @@ app.post('/sign-up', function (req, res) {
     
     salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password,salt);
-    pool.query('INSERT INTO "user" (username,password) values ($1,$2)',[username,dbString],function(err, result) {
-          // handle an error from the query
-          if(err) {
-              res.status(500).send(err.toString());
-          }
-          else {
-              
-                  //checking for user id to create session
-                  pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err, result) {
+    
+    
+    
+    
+    pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err, result) {
                       // handle an error from the query
                       if(err) {
                             res.status(500).send(err.toString());
                        }
                        else {
                       
-                            //set the session id
-                             req.session.auth = {userId: result.rows[0].id};
-                             res.send("user successfully created:" + username);
-       
-                             //set cookie with session id
-                             //internally on the server side, it maps the session id to an object
-                             //{{auth:userId}}
+                             if(result.rows.length === 0){
+                                
+                                 
+    
+    
+                                pool.query('INSERT INTO "user" (username,password) values ($1,$2)',[username,dbString],function(err, result) {
+                                      // handle an error from the query
+                                      if(err) {
+                                          res.status(500).send(err.toString());
+                                      }
+                                      else {
+                                          
+                                              //checking for user id to create session
+                                              pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err, result) {
+                                                  // handle an error from the query
+                                                  if(err) {
+                                                        res.status(500).send(err.toString());
+                                                   }
+                                                   else {
+                                                  
+                                                        //set the session id
+                                                         req.session.auth = {userId: result.rows[0].id};
+                                                         res.send("user successfully created:" + username);
+                                   
+                                                         //set cookie with session id
+                                                         //internally on the server side, it maps the session id to an object
+                                                         //{{auth:userId}}
+                                                                  
+                                                          }
+                                                     });
+                                           
+                                            }      
+                                        });
+                                      
+                             }                                         
+                         
+                      else{//username already exists
+                           
+                           res.status(401).send('Oops! This username already exists! Please try some other username !');
+                                         
+                      
+                      
+                     }
+                                            
+                            
+                            
                               
                       }
                  });
-       
-        }      
-    });
-  
+
+
 }); 
  
  
